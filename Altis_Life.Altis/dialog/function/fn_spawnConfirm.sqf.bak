@@ -63,22 +63,6 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
 
-[] spawn {
-	sleep 5;
-	hintC format["Welcome %1 To  AltisLifePlus Mode RPG(RP)!",name player];
-	};
-	
-[] spawn {
-	sleep 5;
-	if(playerSide == west) then {
-	hintC "Welcome to  AltisLifePlus, any cop welcome/info message";
-	};
-	if(playerSide == civilian) then {
-	hintC "your civ welcome message";
-	};
-};
-
-
 if(life_firstSpawn) then {
 	life_firstSpawn = false;
 	[] call life_fnc_welcomeNotification;
